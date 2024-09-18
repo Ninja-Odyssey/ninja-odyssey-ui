@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ninja Odyssey Web Frontend
+
+Welcome to the Ninja Odyssey web frontend repository! This project is designed to provide a seamless and engaging user experience for the Ninja Odyssey game.
+
+## Technologies Used
+
+- React for building the user interface and managing state
+- TypeScript for type safety and better code maintainability
+- Tailwind CSS for styling and layout management
+- Next.js for server-side rendering and static site generation
+- ESLint and TypeScript ESLint for code linting and type checking
+
+## Project Structure
+
+The project is structured as follows:
+
+- `src`: This directory contains the source code for the project.
+  - `app`: This directory contains global styles and utility classes.
+  - `components`: This directory contains reusable React components.
+  - `pages`: This directory contains Next.js pages.
+  - `public`: This directory contains static assets.
+  - `styles`: This directory contains global styles and utility classes.
+- `tailwind.config.ts`: This file contains the configuration for Tailwind CSS.
+- `postcss.config.mjs`: This file contains the configuration for PostCSS.
+- `tsconfig.json`: This file contains the configuration for the TypeScript compiler.
+- `.eslintrc.json`: This file contains the configuration for ESLint.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository: `git clone https://github.com/your-username/ninja-odyssey-web-frontend.git`
+2. Install dependencies: `npm install` or `yarn install`
+3. Start the development server: `npm run dev` or `yarn dev`
+4. Open the project in your browser: `http://localhost:3000`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them.
+4. Push your branch to your forked repository.
+5. Submit a pull request to the original repository.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
