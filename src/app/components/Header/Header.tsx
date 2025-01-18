@@ -12,15 +12,15 @@ const navItems = [
   },
   {
     name: "Rankings",
-    href: "/",
+    href: "javascript:void(0)",
   },
   {
     name: "Patch Notes",
-    href: "/",
+    href: "javascript:void(0)",
   },
   {
     name: "Contact",
-    href: "/",
+    href: "javascript:void(0)",
   },
 ];
 export default function Header() {

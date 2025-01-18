@@ -53,23 +53,30 @@ h2 {
 h3 {
   @apply text-[28px];
 }
-
+a,button{
+  transition: all ease 0.4s;
+}
 .headernav {
+
   li {
     a {
       position: relative;
-
+      &::before {
+        background: url("../assets/images/starIcon.png");
+        content: "";
+        background-size: 11px;
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        left: 0;
+        bottom: -20px;
+        // opacity: 0;
+      }
       &.active,
       &:hover {
+        color: #fff;
         &::before {
-          background: url("../../app/");
-          content: "";
-          background-size: 11px;
-          position: absolute;
-          width: 11px;
-          height: 11px;
-          left: 0;
-          bottom: -20px;
+          opacity: 1;
         }
       }
     }
