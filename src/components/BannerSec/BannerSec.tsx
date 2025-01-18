@@ -16,7 +16,7 @@ export default function BannerSec() {
   return (
     <div
       className="bannerSec"
-      style={{ background: `url(${assets.bannerBg}) no-repeat` }}
+      style={{ background: `url(${assets.bannerBg.src}) no-repeat` }}
     >
       <div className="container">
         <div
