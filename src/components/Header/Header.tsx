@@ -1,7 +1,18 @@
 "use client";
 
+import DrawerIcon from "@/icons/DrawerIcon";
 import assets from "@/lib/json/assets";
 import { Button } from "@/lib/ui/Button/button";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/lib/ui/Drawer/drawer";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -68,7 +79,47 @@ export default function Header() {
               <p className="text-white text-[25px]">Ninja Odyssey</p>
             </Link>
           </div>
-          <div className="ml-auto">
+          <Drawer direction="right">
+            <DrawerTrigger className="hidden md:inline-flex ml-auto">
+              <DrawerIcon />
+            </DrawerTrigger>
+            <DrawerContent>
+              <Link
+                href="/"
+                className="flex items-center gap-[4px] logoLink mb-10 justify-center"
+              >
+                <Image
+                  src={assets.logo}
+                  width={48}
+                  height={48}
+                  alt="logo"
+                  className="w-[48px] h-auto object-contain"
+                />
+                <p className="text-white text-[25px]">Ninja Odyssey</p>
+              </Link>
+              <ul className="flex flex-col gap-[30px] headernav ">
+                {navItems.map((item, index) => (
+                  <li key={index}>
+                    <a
+                      href={item.href}
+                      className={pathname === item.href ? "active" : ""}
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+                <li>
+                  <Button
+                    variant="default"
+                    onClick={() => router.push("/coming-soon")}
+                  >
+                    Shop
+                  </Button>
+                </li>
+              </ul>
+            </DrawerContent>
+          </Drawer>
+          <div className="ml-auto md:hidden">
             <ul className="flex gap-[30px] headernav items-center">
               {navItems.map((item, index) => (
                 <li key={index}>

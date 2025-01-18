@@ -34,7 +34,7 @@ button {
   @apply font-outfit;
 }
 p {
-  @apply leading-[1.5]  text-[16px] ;
+  @apply leading-[1.5]  text-[16px] xs:text-[14px] ;
 }
 
 h1,
@@ -47,10 +47,10 @@ h6 {
 }
 
 h1 {
-  @apply text-[98px];
+  @apply text-[98px] lg:text-[80px] md:text-[60px] xs:text-[50px];
 }
 h2 {
-  @apply text-[60px] mb-4;
+  @apply text-[60px] lg:text-[44px] md:text-[36px] xs:text-[28px] mb-4;
 }
 
 h3 {
@@ -78,6 +78,16 @@ figure {
   }
 }
 
+@keyframes spinMiddle{
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%)  rotate(360deg);
+  }
+}
+
+
 .mainHeader{
   transition: all ease 0.4s;
 }
@@ -93,10 +103,11 @@ figure {
         width: 11px;
         height: 11px;
         left: 50%;
-        transform: translateX(-50%);
+    transform: translateX(-50%);
         bottom: -15px;
         opacity: 0;
         transition: all ease 0.4s;
+        animation: spinMiddle 2s linear infinite;
       }
       &.active,
       &:hover {
@@ -111,6 +122,9 @@ figure {
 
 .cmn_gap {
   padding: 100px 0;
+  @media (max-width:899px){
+    padding: 50px 0;
+  }
 }
 
 
@@ -144,7 +158,7 @@ figure {
 
 @property --myColor3 {
   syntax: "<color>";
-  initial-value: #f04c00;
+  initial-value: #F0B435;
   inherits: false;
 }
 
@@ -165,6 +179,9 @@ figure {
   text-fill-color: transparent;
   animation: moveGradient 5s ease infinite;
   transition: all ease 0.4s;
+  @media (max-width:599px){
+    font-size: 16px;
+  }
 }
 
 @keyframes moveGradient {

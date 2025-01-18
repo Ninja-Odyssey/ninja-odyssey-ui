@@ -11,7 +11,8 @@ const config: Config = {
       center: true,
       padding: "10px",
       screens: {
-        lg: "1220px",
+        xl: "1320px",
+        lg: "1200px",
         md: "900px",
         sm: "600px",
       },
@@ -19,19 +20,19 @@ const config: Config = {
     fontFamily: {
       montserrat: ["Montserrat", "serif"],
       roboto: ["Roboto", "serif"],
-      martian:["Martian Mono","serif"],
-      zillia:["Zilla Slab","serif"],
-      outfit:["Outfit","serif"],
+      martian: ["Martian Mono", "serif"],
+      zillia: ["Zilla Slab", "serif"],
+      outfit: ["Outfit", "serif"],
     },
     extend: {
       colors: {
-        primary: "#821302", 
-        secondary:"#F0B435",
+        primary: "#821302",
+        secondary: "#F0B435",
         colorefeded: "#efeded",
         color707070: "#707070",
-        bgPrimary:"#15191F",
-        bgSecondary:"#0D1116",
-        borderPrimary:"#AFB8BC"
+        bgPrimary: "#15191F",
+        bgSecondary: "#0D1116",
+        borderPrimary: "#AFB8BC",
       },
     },
     screens: {
@@ -45,6 +46,5 @@ const config: Config = {
     },
   },
   plugins: [],
-
 };
 export default config;

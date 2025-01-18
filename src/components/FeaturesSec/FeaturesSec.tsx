@@ -30,9 +30,9 @@ export default function FeaturesSec() {
           <h2>Unveil the Ninja Odyssey Story</h2>
           <p>Witness the Epic Tale of the Ninja Odyssey</p>
         </div>
-        <div className="flex  flex-wrap -mx-[10px]">
+        <div className="flex  flex-wrap -m-[10px] justify-center">
           {featureList.map((item, index) => (
-            <div key={index} className="w-1/3 px-[10px]">
+            <div key={index} className="w-1/3 lg:w-1/2 md:w-full p-[10px]">
               <FeaturesCard {...item} />
             </div>
           ))}

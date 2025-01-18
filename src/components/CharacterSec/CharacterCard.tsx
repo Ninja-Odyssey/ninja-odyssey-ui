@@ -15,7 +15,7 @@ export default function CharacterCard({ bg, charImg }: CharacterCardProps) {
         className={`border border-borderPrimary rounded-[5px] py-8 charCard`}
         style={{ backgroundColor: sanitizedBg }}
       >
-        <figure className="w-full h-[full] max-h-[410px] charShadow">
+        <figure className="w-full h-[410px] charShadow">
           <Image
             src={charImg}
             width={300}

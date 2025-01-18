@@ -16,7 +16,7 @@ export default function BlogCard({ img, title, desc }: BlogCardProps) {
 
   return (
     <div className="bg-white">
-      <div className="w-full h-[330px] overflow-hidden cursor-pointer">
+      <div className="w-full h-[330px] sm:h-[240px] overflow-hidden cursor-pointer">
         <figure className="w-full h-full hoverImg overflow-hidden">
           <Image
             src={img}
@@ -27,12 +27,12 @@ export default function BlogCard({ img, title, desc }: BlogCardProps) {
           />
         </figure>
       </div>
-      <div className="p-6 pb-8">
+      <div className="p-6 pb-8 md:p-3 md:pb-6">
         <h3 className="mb-2 text-bgPrimary">{title}</h3>
         <p>{desc}</p>
-        <div className="flex items-center justify-between flex-wrap mt-8">
-          <Button variant="secondary" className="w-[49%]" onClick={()=>window.open(fblink)}>Join Now</Button>
-          <Button variant="outline" className="w-[49%]" onClick={()=>router.push("/patch-details")}>Read more</Button>
+        <div className="flex items-center justify-between flex-wrap mt-8 xs:gap-3">
+          <Button variant="secondary" className="w-[49%] xs:w-full" onClick={()=>window.open(fblink)}>Join Now</Button>
+          <Button variant="outline" className="w-[49%] xs:w-full" onClick={()=>router.push("/patch-details")}>Read more</Button>
         </div>
       </div>
     </div>

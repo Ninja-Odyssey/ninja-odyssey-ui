@@ -31,9 +31,9 @@ export default function CharacterSec() {
           Unlock a world of customization options to make your characters truly your own.
           </p>
         </div>
-        <div className="flex  flex-wrap -mx-[10px]">
+        <div className="flex  flex-wrap -m-[10px]">
           {charList.map((item, index) => (
-            <div key={index} className="w-1/4 px-[10px] ">
+            <div key={index} className="w-1/4 lg:w-1/2 sm:w-full p-[10px] ">
               <CharacterCard {...item} />
             </div>
           ))}

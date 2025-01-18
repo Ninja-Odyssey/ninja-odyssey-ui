@@ -10,9 +10,9 @@ export default function PatchSec() {
           <h2>New Features Every Patch</h2>
           <p>Stay Ahead with the Latest Updates and Enhancements</p>
         </div>
-        <div className="flex  flex-wrap -mx-[10px]">
+        <div className="flex  flex-wrap -m-[10px]">
           {blogList.map((item, index) => (
-            <div key={index} className="w-1/2 px-[10px]">
+            <div key={index} className="w-1/2  md:w-full p-[10px]">
               <BlogCard {...item} />
             </div>
           ))}
