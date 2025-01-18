@@ -1,3 +1,10 @@
-export default function Home() {
-  return <h1>Tal was here</h1>;
+import React from 'react';
+import BannerSec from './components/BannerSec/BannerSec';
+
+export default function Index() {
+  return (
+    <div>
+      <BannerSec/>
+    </div>
+  );
 }

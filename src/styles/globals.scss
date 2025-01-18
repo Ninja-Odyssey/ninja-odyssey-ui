@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Martian+Mono:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-[#15191F];
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  @apply text-[16px];
+}
+body {
+  overflow-x: hidden;
+  @apply font-normal  text-[#909094] font-martian text-[16px];
+}
+a,
+button {
+  @apply font-outfit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-[#FEFFFF] font-zillia font-semibold;
+}
+
+h1 {
+  @apply text-[98px];
+}
+h2 {
+  @apply text-[60px];
+}
+
+h3 {
+  @apply text-[28px];
+}
+
+.headernav {
+  li {
+    a {
+      position: relative;
+
+      &.active,
+      &:hover {
+        &::before {
+          background: url("../../app/");
+          content: "";
+          background-size: 11px;
+          position: absolute;
+          width: 11px;
+          height: 11px;
+          left: 0;
+          bottom: -20px;
+        }
+      }
+    }
+  }
+}
