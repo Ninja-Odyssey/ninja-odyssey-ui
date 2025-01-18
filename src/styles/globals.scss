@@ -116,13 +116,14 @@ figure {
 
 .bannerSec {
   // background: url("/assets/images/bannerBG.png") no-repeat;
-
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: right top;
 }
 .innerBanner{
-  background: url("/assets/images/innerBanner.png") no-repeat;
+  // background: url("/assets/images/innerBanner.png") no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center ;
   background-repeat: no-repeat;
   padding: 190px 0;
