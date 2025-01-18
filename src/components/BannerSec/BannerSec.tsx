@@ -5,7 +5,7 @@ import { fblink } from "@/lib/links";
 import { Button } from "@/lib/ui/Button/button";
 import AOS from "aos";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ReactTyped, Typed } from "react-typed";
 
 export default function BannerSec() {
@@ -13,10 +13,29 @@ export default function BannerSec() {
     AOS.init();
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 480);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div
       className="bannerSec"
-      style={{ backgroundImage: `url(${assets.bannerBg.src}) ` }}
+      style={{
+        backgroundImage: `url(${
+          isMobile ? assets.bannerBgMobile.src : assets.bannerBg.src
+        })`,
+      }}
     >
       <div className="container">
         <div

@@ -136,7 +136,7 @@ export default function Header() {
                   variant="default"
                   onClick={() => router.push("/coming-soon")}
                 >
-                  Shop
+                  Login / Register
                 </Button>
               </li>
             </ul>

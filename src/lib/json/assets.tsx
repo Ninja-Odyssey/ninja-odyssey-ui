@@ -7,6 +7,7 @@ import feature3 from "../../../public/assets/images/feature3.png";
 import logoBig from "../../../public/assets/images/logoBig.png";
 import founderPack from "../../../public/assets/images/founderPack.png";
 import innerBanner from "../../../public/assets/images/innerBanner.png";
+import bannerBgMobile from "../../../public/assets/images/bannerBgMobile.png";
 
 
 
@@ -28,6 +29,7 @@ export default{
     logoBig,
     founderPack,
     innerBanner,
+    bannerBgMobile,
 
 
 
