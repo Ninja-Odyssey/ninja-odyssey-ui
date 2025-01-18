@@ -26,8 +26,12 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#821302", 
+        secondary:"#F0B435",
         colorefeded: "#efeded",
         color707070: "#707070",
+        bgPrimary:"#15191F",
+        bgSecondary:"#0D1116",
+        borderPrimary:"#AFB8BC"
       },
     },
     screens: {

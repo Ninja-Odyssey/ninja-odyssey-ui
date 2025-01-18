@@ -13,7 +13,7 @@
 
 @layer base {
   body {
-    @apply bg-[#15191F];
+    @apply bg-bgPrimary;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
@@ -33,6 +33,9 @@ a,
 button {
   @apply font-outfit;
 }
+p {
+  @apply leading-[1.5];
+}
 
 h1,
 h2,
@@ -40,37 +43,44 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-[#FEFFFF] font-zillia font-semibold;
+  @apply text-[#FEFFFF] font-zillia font-semibold leading-[1.2] capitalize;
 }
 
 h1 {
   @apply text-[98px];
 }
 h2 {
-  @apply text-[60px];
+  @apply text-[60px] mb-4;
 }
 
 h3 {
   @apply text-[28px];
 }
-a,button{
-  transition: all ease 0.4s;
+a,
+button {
+  transition: all ease 0.5s !important;
 }
-.headernav {
 
+figure {
+  line-height: 0;
+}
+
+.headernav {
   li {
     a {
       position: relative;
       &::before {
-        background: url("../assets/images/starIcon.png");
+        background: url("/assets/images/starIcon.png");
         content: "";
         background-size: 11px;
         position: absolute;
         width: 11px;
         height: 11px;
-        left: 0;
-        bottom: -20px;
-        // opacity: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -15px;
+        opacity: 0;
+        transition: all ease 0.4s;
       }
       &.active,
       &:hover {
@@ -80,5 +90,173 @@ a,button{
         }
       }
     }
+  }
+}
+
+.cmn_gap {
+  padding: 100px 0;
+}
+
+.bannerSec {
+  background: url("/assets/images/bannerBG.png") no-repeat;
+  // min-height: 800px;
+  background-size: cover;
+  background-position: right;
+}
+
+@property --myColor1 {
+  syntax: "<color>";
+  initial-value: #002c52;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: "<color>";
+  initial-value: #254867;
+  inherits: false;
+}
+
+@property --myColor3 {
+  syntax: "<color>";
+  initial-value: #f04c00;
+  inherits: false;
+}
+
+.subHeading {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    var(--myColor1) 0%,
+    var(--myColor2) 38.5%,
+    var(--myColor3) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: moveGradient 5s ease infinite;
+  transition: all ease 0.4s;
+}
+
+@keyframes moveGradient {
+  0% {
+    --myColor1: #002c52;
+    --myColor2: #254867;
+    --myColor3: #f04c00;
+  }
+  50% {
+    --myColor1: #f04c00;
+    --myColor2: #002c52;
+    --myColor3: #254867;
+  }
+  75% {
+    --myColor1: #254867;
+    --myColor2: #f04c00;
+    --myColor3: #002c52;
+  }
+  100% {
+    --myColor1: #002c52;
+    --myColor2: #254867;
+    --myColor3: #f04c00;
+  }
+}
+.mainHeading {
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+  text-shadow: 2px 7px 7px rgba(0, 0, 0, 0.51);
+}
+
+.hoverImg {
+  overflow: hidden;
+  transition: all ease 0.4s;
+  img {
+    transition: all ease 0.4s;
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.charShadow {
+  position: relative;
+  img {
+    position: relative;
+    z-index: 2;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    bottom: -5px;
+    left: 50%;
+    border-radius: 100%;
+    transform: translateX(-50%);
+    background: rgb(0, 0, 0);
+    filter: blur(12px);
+    z-index: 1;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  transition: all ease 0.4s;
+  animation: typing 2s steps(30) 1s 1 normal both,
+    blink-caret 0.75s step-end 2s forwards;
+}
+
+/* Keyframe for typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Keyframe for blinking cursor */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+.characterCardHover {
+  cursor: pointer;
+  .charCard {
+    transition: all ease 0.4s;
+  }
+  &:hover {
+    .charCard {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.logoLink{
+  img{
+    transition: all ease 0.4s;
+  }
+  &:hover{
+    img{
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.footerNav{
+  .active{
+    color: #fff;
   }
 }

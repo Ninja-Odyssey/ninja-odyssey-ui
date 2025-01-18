@@ -1,10 +1,15 @@
-import React from 'react';
-import BannerSec from './components/BannerSec/BannerSec';
+import BlogUpdatesSec from "@/components/BlogUpdatesSec/BlogUpdatesSec";
+import CharacterSec from "@/components/CharacterSec/CharacterSec";
+import FeaturesSec from "@/components/FeaturesSec/FeaturesSec";
+import BannerSec from "../components/BannerSec/BannerSec";
 
 export default function Index() {
   return (
-    <div>
-      <BannerSec/>
-    </div>
+    <>
+      <BannerSec />
+      <FeaturesSec />
+      <CharacterSec />
+      <BlogUpdatesSec />
+    </>
   );
 }
