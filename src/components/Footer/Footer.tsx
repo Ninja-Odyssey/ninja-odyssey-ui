@@ -41,8 +41,8 @@ export default function Footer() {
   return (
     <div className="cmn_gap bg-[#11141C]">
       <div className="container">
-        <div className="flex gap-10 justify-between">
-          <div className="max-w-[200px]">
+        <div className="flex gap-10 justify-between md:flex-wrap">
+          <div className="max-w-[200px]  md:w-full md:max-w-full">
             <Link
               href="/"
               className="flex flex-col items-center gap-[4px] logoLink"
@@ -58,8 +58,8 @@ export default function Footer() {
             </Link>
             <p className="text-center mt-4 text-[14px]">©2025 <span className="text-secondary">Ninja Odyssey</span>  All Rights Reserved.</p>
           </div>
-          <div className="flex w-3/4">
-            <div className="w-1/3">
+          <div className="flex w-3/4 md:w-full sm:flex-wrap ">
+            <div className="w-1/3 sm:w-1/2">
             <p className="mb-3 text-secondary">Explore</p>
               <ul className="footerNav">
                 {footerNav.map((item, index) => (
@@ -76,7 +76,7 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-            <div className="w-1/3">
+            <div className="w-1/3  sm:w-1/2">
             <p className="mb-3 text-secondary">Contact</p>
               <ul>
                 {contactNav.map((item, index) => (
