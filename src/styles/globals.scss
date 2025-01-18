@@ -34,7 +34,7 @@ button {
   @apply font-outfit;
 }
 p {
-  @apply leading-[1.5]  text-[16px];
+  @apply leading-[1.5]  text-[16px] ;
 }
 
 h1,
@@ -116,9 +116,17 @@ figure {
 
 .bannerSec {
   background: url("/assets/images/bannerBG.png") no-repeat;
-  // min-height: 800px;
+
   background-size: cover;
   background-position: right top;
+}
+.innerBanner{
+  background: url("/assets/images/innerBanner.png") no-repeat;
+  background-size: cover;
+  background-position: center ;
+  background-repeat: no-repeat;
+  padding: 190px 0;
+  min-height: 500px;
 }
 
 @property --myColor1 {
@@ -297,3 +305,45 @@ figure {
   border-radius: 100px;
 }
 
+.blogDetailsHead{
+   text-align: center;
+   padding-bottom: 50px;
+  h2{
+    margin-bottom: 10px;
+    font-size: 40px;
+   
+  }
+}
+
+.blogContents{
+
+  h3{
+    margin-bottom: 20px;
+  }
+  p{
+    color: #fff;
+    &:not(:last-child){
+      margin-bottom: 12px ;
+    }
+  }
+  ul{
+    padding-bottom: 40px;
+    li{
+      padding-left: 40px;
+      position: relative;
+      margin-left: 40px;
+      &:not(:last-child){
+        margin-bottom: 12px;
+      }
+      &::before{
+        content: "";
+        width: 30px;
+        left: 0;
+        height: 2px;
+        position: absolute;
+        top: 10px;
+        background-color: #F0B435;
+      }
+    }
+  }
+}

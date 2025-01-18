@@ -1,5 +1,6 @@
 "use client"
 
+import { fblink } from "@/lib/links";
 import { Button } from "@/lib/ui/Button/button";
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
@@ -30,8 +31,8 @@ export default function BlogCard({ img, title, desc }: BlogCardProps) {
         <h3 className="mb-2 text-bgPrimary">{title}</h3>
         <p>{desc}</p>
         <div className="flex items-center justify-between flex-wrap mt-8">
-          <Button variant="secondary" className="w-[49%]">Join Now</Button>
-          <Button variant="outline" className="w-[49%]" onClick={()=>router.push("/coming-soon")}>Read more</Button>
+          <Button variant="secondary" className="w-[49%]" onClick={()=>window.open(fblink)}>Join Now</Button>
+          <Button variant="outline" className="w-[49%]" onClick={()=>router.push("/patch-details")}>Read more</Button>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import React from 'react'
 import BlogCard from './BlogCard'
 
 
-const blogList=[
+export const blogList=[
   {
     img:assets.founderPack,
     title:"Founder pack sale is live now !!",

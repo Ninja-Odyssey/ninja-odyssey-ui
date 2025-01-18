@@ -18,7 +18,7 @@ const navItems = [
   },
   {
     name: "Patch Notes",
-    href: "/coming-soon",
+    href: "/patch-notes",
   },
   {
     name: "Contact",

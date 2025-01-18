@@ -6,6 +6,7 @@ import feature2 from "../../../public/assets/images/feature2.png";
 import feature3 from "../../../public/assets/images/feature3.png";
 import logoBig from "../../../public/assets/images/logoBig.png";
 import founderPack from "../../../public/assets/images/founderPack.png";
+import innerBanner from "../../../public/assets/images/innerBanner.png";
 
 
 
@@ -26,6 +27,7 @@ export default{
     feature3,
     logoBig,
     founderPack,
+    innerBanner,
 
 
 

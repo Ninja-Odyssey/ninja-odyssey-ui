@@ -1,7 +1,9 @@
 "use client";
 
+import { fblink } from "@/lib/links";
 import { Button } from "@/lib/ui/Button/button";
 import AOS from "aos";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { ReactTyped, Typed } from "react-typed";
 
@@ -9,6 +11,7 @@ export default function BannerSec() {
   useEffect(() => {
     AOS.init();
   }, []);
+
 
   return (
     <div className="bannerSec">
@@ -30,7 +33,7 @@ export default function BannerSec() {
           <h1 className="italic mainHeading mb-5">
             Founder’s Pack is Live Now
           </h1>
-          <Button variant="secondary">Join Now</Button>
+          <Button variant="secondary" onClick={()=>window.open(fblink)}>Join Now</Button>
         </div>
       </div>
     </div>
