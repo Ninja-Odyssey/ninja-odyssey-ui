@@ -18,7 +18,10 @@ export default function ConditionalHeaderFooter({
   return (
     <>
       <Header />
+      <div className="pt-[72px]">
+
       {children}
+      </div>
       <Footer/>
     </>
   );

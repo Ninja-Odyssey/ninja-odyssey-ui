@@ -27,11 +27,11 @@ const footerNav = [
 const contactNav = [
   {
     name: "Facebook",
-    href: "/coming-soon",
+    href: "https://www.facebook.com/groups/3296226343847323",
   },
   {
     name: "Discord",
-    href: "/coming-soon",
+    href: "https://discord.gg/c4EZdSBqAX",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function Footer() {
     <div className="cmn_gap bg-[#11141C]">
       <div className="container">
         <div className="flex gap-10 justify-between">
-          <div className="">
+          <div className="max-w-[200px]">
             <Link
               href="/"
               className="flex flex-col items-center gap-[4px] logoLink"
@@ -81,7 +81,7 @@ export default function Footer() {
               <ul>
                 {contactNav.map((item, index) => (
                   <li key={index} className="mb-5 last:mb-0">
-                    <a href={item.href} className="hover:text-white">
+                    <a target="_blank" href={item.href} className="hover:text-white">
                       {item.name}
                     </a>
                   </li>

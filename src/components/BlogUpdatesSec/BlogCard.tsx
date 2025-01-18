@@ -1,5 +1,8 @@
+"use client"
+
 import { Button } from "@/lib/ui/Button/button";
 import Image, { StaticImageData } from "next/image";
+import { useRouter } from "next/navigation";
 
 interface BlogCardProps {
   img: string | StaticImageData;
@@ -8,6 +11,8 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({ img, title, desc }: BlogCardProps) {
+  const router=useRouter();
+
   return (
     <div className="bg-white">
       <div className="w-full h-[330px] overflow-hidden cursor-pointer">
@@ -26,7 +31,7 @@ export default function BlogCard({ img, title, desc }: BlogCardProps) {
         <p>{desc}</p>
         <div className="flex items-center justify-between flex-wrap mt-8">
           <Button variant="secondary" className="w-[49%]">Join Now</Button>
-          <Button variant="outline" className="w-[49%]">Read more</Button>
+          <Button variant="outline" className="w-[49%]" onClick={()=>router.push("/coming-soon")}>Read more</Button>
         </div>
       </div>
     </div>

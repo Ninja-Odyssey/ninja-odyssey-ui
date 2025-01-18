@@ -22,8 +22,8 @@
 
 body,
 html {
-  scroll-behavior: smooth;
-  @apply text-[16px];
+
+  @apply text-[16px] scroll-smooth;
 }
 body {
   overflow-x: hidden;
@@ -34,7 +34,7 @@ button {
   @apply font-outfit;
 }
 p {
-  @apply leading-[1.5];
+  @apply leading-[1.5]  text-[16px];
 }
 
 h1,
@@ -65,6 +65,22 @@ figure {
   line-height: 0;
 }
 
+.loadingLogo{
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mainHeader{
+  transition: all ease 0.4s;
+}
 .headernav {
   li {
     a {
@@ -97,11 +113,12 @@ figure {
   padding: 100px 0;
 }
 
+
 .bannerSec {
   background: url("/assets/images/bannerBG.png") no-repeat;
   // min-height: 800px;
   background-size: cover;
-  background-position: right;
+  background-position: right top;
 }
 
 @property --myColor1 {
@@ -260,3 +277,23 @@ figure {
     color: #fff;
   }
 }
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 100px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #fceac4;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #F0B435;
+  border-radius: 100px;
+}
+

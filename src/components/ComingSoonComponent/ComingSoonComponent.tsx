@@ -21,7 +21,7 @@ export default function ComingSoonComponent() {
             className="w-full h-full object-contain"
           />
         </figure>
-        <h1>Coming Soon</h1>
+        <h1 className="mb-8">Coming Soon</h1>
         <Button variant="secondary" onClick={() => router.push("/")}>
           Back to Home
         </Button>
