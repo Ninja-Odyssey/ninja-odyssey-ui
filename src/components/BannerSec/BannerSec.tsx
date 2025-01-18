@@ -1,5 +1,6 @@
 "use client";
 
+import assets from "@/lib/json/assets";
 import { fblink } from "@/lib/links";
 import { Button } from "@/lib/ui/Button/button";
 import AOS from "aos";
@@ -12,9 +13,11 @@ export default function BannerSec() {
     AOS.init();
   }, []);
 
-
   return (
-    <div className="bannerSec">
+    <div
+      className="bannerSec"
+      style={{ background: `url(${assets.bannerBg}) no-repeat` }}
+    >
       <div className="container">
         <div
           className="bannerText pt-[240px] pb-[160px] max-w-[700px]"
@@ -33,7 +36,9 @@ export default function BannerSec() {
           <h1 className="italic mainHeading mb-5">
             Founder’s Pack is Live Now
           </h1>
-          <Button variant="secondary" onClick={()=>window.open(fblink)}>Join Now</Button>
+          <Button variant="secondary" onClick={() => window.open(fblink)}>
+            Join Now
+          </Button>
         </div>
       </div>
     </div>
