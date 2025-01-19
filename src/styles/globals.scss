@@ -165,25 +165,7 @@ figure {
   initial-value: #f0b435;
   inherits: false;
 }
-@media (max-width: 599px) {
-  @property --myColor1 {
-    syntax: "<color>";
-    initial-value: #ffffff;
-    inherits: false;
-  }
 
-  @property --myColor2 {
-    syntax: "<color>";
-    initial-value: #ffffff;
-    inherits: false;
-  }
-
-  @property --myColor3 {
-    syntax: "<color>";
-    initial-value: #ffffff;
-    inherits: false;
-  }
-}
 
 .subHeading {
   font-weight: 500;
@@ -225,7 +207,7 @@ figure {
   }
   100% {
     --myColor1: #002c52;
-    --myColor2: #ffffff;
+    --myColor2: #254867;
     --myColor3: #f04c00;
   }
 }
