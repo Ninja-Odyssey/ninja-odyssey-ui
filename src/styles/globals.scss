@@ -389,3 +389,21 @@ figure {
     }
   }
 }
+
+.loginbox{
+  box-shadow: 2px 2px 20px 0 rgba(45, 57, 83, 0.637) ;
+  border: 2px solid #0D1116;
+}
+.otpinput{
+  div{
+    justify-content: center;
+    gap: 20px;
+  }
+  input{
+    width: 60px !important;
+    height: 50px;
+    border-radius: 10px;
+    color: #000;
+    font-size: 16px;
+  }
+}

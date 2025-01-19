@@ -25,7 +25,7 @@ const navItems = [
   },
   {
     name: "Rankings",
-    href: "/coming-soon",
+    href: "/ranking",
   },
   {
     name: "Patch Notes",
@@ -111,7 +111,7 @@ export default function Header() {
                 <li>
                   <Button
                     variant="default"
-                    onClick={() => router.push("/coming-soon")}
+                    onClick={() => router.push("/auth/login")}
                   >
                     Shop
                   </Button>
@@ -134,7 +134,7 @@ export default function Header() {
               <li>
                 <Button
                   variant="default"
-                  onClick={() => router.push("/coming-soon")}
+                  onClick={() => router.push("/auth/login")}
                 >
                   Login / Register
                 </Button>
