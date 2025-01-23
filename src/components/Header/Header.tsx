@@ -134,7 +134,7 @@ export default function Header() {
               <li>
                 <Button
                   variant="default"
-                  onClick={() => router.push("/auth/login")}
+                  onClick={() => router.push("/coming-soon")}
                 >
                   Login / Register
                 </Button>
